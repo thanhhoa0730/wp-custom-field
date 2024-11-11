@@ -1,0 +1,15 @@
+env:
+  browser: true
+  es2021: true
+  jquery: true
+globals:
+  googletag: true
+  ga: true
+extends:
+  - standard
+parserOptions:
+  ecmaVersion: 2015
+  sourceType: module
+rules:
+  no-var: off
+  no-new: off

@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+// ----------------------------------------------
+@mixin button-variant-hover-bright($background, $border, $color) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: lighten($background, 10%);
+    border-color: lighten($border, 25%);
+  }
+
+  &:hover {
+    color: $color;
+    background-color: lighten($background, 10%);
+    border-color: lighten($border, 12%);
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: lighten($background, 10%);
+    border-color: lighten($border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: lighten($background, 17%);
+      border-color: lighten($border, 25%);
+    }
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+  }
+
+  .open > & {
+    .dropdown-toggle {
+      background-image: none;
+    }
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+
+  // .badge {
+  //   color: $background;
+  //   background-color: $color;
+  // }
+}
+
+// ----------------------------------------------
+@mixin button-variant-hover-inverse($background, $border, $color) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $background;
+    background-color: $color;
+    // border-color: darken($border, 25%);
+  }
+
+  &:hover {
+    color: $background;
+    background-color: $color;
+    // border-color: darken($border, 12%);
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $background;
+    background-color: $color;
+    // border-color: darken($border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $background;
+      background-color: $color;
+      // border-color: darken($border, 25%);
+    }
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+  }
+
+  .open > & {
+    .dropdown-toggle {
+      background-image: none;
+    }
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+      // border-color: $border;
+    }
+  }
+
+  // .badge {
+  //   color: $background;
+  //   background-color: $color;
+  // }
+}
+
+// Button
+// ----------------------------------------------
+// .btn-*** {
+//   @include button-variant($btn-default-bg, $btn-default-border, $btn-default-color);
+// }
+
+// ----------------------------------------------
+.btn-multiline {
+  white-space: normal;
+}
+
+// ----------------------------------------------
+.btn {
+  @include transition(all $hover-transition-speed ease);
+}

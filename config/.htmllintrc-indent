@@ -1,0 +1,32 @@
+{
+    "attr-bans": [
+        "align",
+        "background",
+        "bgcolor",
+        "border",
+        "longdesc",
+        "marginwidth",
+        "marginheight",
+        "scrolling",
+        "style"
+    ],
+    "attr-name-style": false,
+    "attr-validate": false,
+    "id-class-no-ad": false,
+    "attr-order": [
+        "id",
+        "class"
+    ],
+    "id-class-style": false,
+    "class-style": "dash",
+    "img-req-alt": "",
+    "indent-style": "spaces",
+    "spec-char-escape": false,
+    "line-end-style": false,
+    "tag-bans": [
+        "b"
+    ],
+    "title-max-len": false,
+    "link-req-noopener": false,
+    "attr-req-value": false
+}
